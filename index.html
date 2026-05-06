@@ -205,6 +205,18 @@
     .footer-brand strong { color: var(--orange); font-weight: 800; font-size: 13px; display:block; }
     .footer-brand span { color: var(--muted); font-size: 11px; }
     .footer-addr { font-size: 11px; color: var(--muted); text-align: left; }
+  .video-section {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    background: #141414;
+  }
+  .video-section video {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-top: 10px;
+    display: block;
+  }
   </style>
 </head>
 <body>
@@ -337,6 +349,13 @@
         <div><div class="link-label">הודעה מהירה</div><div class="link-name">WhatsApp</div></div>
       </a>
     </div>
+  </div>
+
+  <div class="video-section">
+    <div class="sec-title">המשרדים שלנו</div>
+    <video controls playsinline preload="metadata">
+      <source src="offices.mp4" type="video/mp4">
+    </video>
   </div>
 
   <div class="footer">
