@@ -28,9 +28,10 @@
 <style>
 /* פריסה: עמודת טלפון אחת (עד 440px) במרכז, מתג סקיצות דביק למעלה, עוזר צף בפינה */
 :root{
-  --petrol:#023a4a; --petrol-2:#044154; --petrol-3:#06566e; --ink:#01222c;
-  --mint:#00e1a9; --mint-soft:#e8fbf5; --mint-line:#cdeee4;
-  --paper:#ffffff; --mist:#f3f8f7; --muted:#5a7680; --text:#0c2a33;
+  --petrol:#1f2a30; --petrol-2:#2a353b; --petrol-3:#3a464c; --ink:#141c20;
+  --mint:#12b5a2; --mint-soft:#f1f3f4; --mint-line:#e1e6e8;
+  --paper:#ffffff; --mist:#f7f8f8; --muted:#6b777d; --text:#24303a;
+  --panel:#293137; --bg:#f4f5f6;
   --wa:#1fbf5b;
   --f-display:"Frank Ruhl Libre","David Libre",Georgia,serif;
   --f-body:"Assistant","Heebo",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
@@ -40,7 +41,7 @@
 }
 *{box-sizing:border-box}
 html{direction:rtl}
-html,body{background:#011a22}
+html,body{background:#e9ecee}
 body{font-family:var(--f-body);color:var(--text);margin:0;-webkit-tap-highlight-color:transparent}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
@@ -76,7 +77,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .svc{position:relative;text-align:right;border-radius:var(--r-m);padding:14px 13px 13px;background:linear-gradient(180deg,#fff,var(--mist));border:1px solid var(--mint-line);display:flex;flex-direction:column;gap:6px;min-height:128px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s}
 .svc:hover{box-shadow:var(--shadow);border-color:#9fe3cf}
-.svc .ic{width:40px;height:40px;border-radius:12px;background:var(--petrol);color:var(--mint);display:grid;place-items:center}
+.svc .ic{width:40px;height:40px;border-radius:12px;background:var(--mint-soft);color:var(--petrol);display:grid;place-items:center}
 .svc .ic svg{width:22px;height:22px}
 .svc b{font-size:15.5px;line-height:1.2;color:var(--ink)}
 .svc span{font-size:12.5px;color:var(--muted);line-height:1.4}
@@ -102,17 +103,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .video .play svg{width:24px;height:24px;margin-right:-3px}
 .video-el{display:block;width:40%;margin:0 auto;border-radius:16px;background:#000}
 .video p{position:absolute;bottom:10px;inset-inline:0;margin:0;font-size:12px;opacity:.85;z-index:1}
-.foot{margin-top:26px;background:var(--ink);color:#cfe3e7;padding:22px 20px 26px;display:flex;flex-direction:column;gap:12px}
+.foot{margin-top:26px;background:var(--petrol);color:#c9d0d4;padding:22px 20px 26px;display:flex;flex-direction:column;gap:12px}
 .foot .logo{height:34px;width:auto;align-self:flex-start}
 .foot p{margin:0;font-size:13px;line-height:1.6}
 .foot b{color:#fff}
 
 /* עוזר – מקטע גדול */
-.meet{margin:26px 16px 0;border-radius:var(--r-l);background:radial-gradient(120% 90% at 85% 0%,#0b6179 0%,var(--petrol) 55%,var(--ink) 100%);color:#fff;overflow:hidden;position:relative;display:grid;grid-template-columns:1fr 46%;align-items:end;min-height:250px}
+.meet{margin:26px 16px 0;border-radius:var(--r-l);background:var(--panel);color:#fff;overflow:hidden;position:relative;display:grid;grid-template-columns:1fr 46%;align-items:end;min-height:250px}
 .meet .txt{padding-block:22px;padding-inline:4px 18px;position:relative;z-index:2;align-self:center}
 .meet h2{font-family:var(--f-display);font-size:26px;line-height:1.15;margin:4px 0 8px;color:#fff;text-wrap:balance}
-.meet p{margin:0 0 14px;font-size:14.5px;line-height:1.5;color:#cfe6ea}
-.meet .go{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:var(--ink);font-weight:800;border-radius:14px;padding:11px 18px;font-size:15.5px}
+.meet p{margin:0 0 14px;font-size:14.5px;line-height:1.5;color:#c9d0d4}
+.meet .go{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-weight:800;border-radius:14px;padding:11px 18px;font-size:15.5px}
 .meet .fig{align-self:stretch;position:relative;min-height:250px;overflow:hidden}
 .meet .fig img{position:absolute;bottom:0;right:-70px;height:100%;max-width:none;width:auto;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%)}
 .meet .eyebrow{color:var(--mint)}
@@ -149,17 +150,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .opts{display:grid;gap:8px}
 .opt{display:flex;align-items:center;gap:12px;width:100%;text-align:right;padding:13px 14px;border-radius:14px;border:1px solid var(--mint-line);background:linear-gradient(180deg,#fff,var(--mist));font-weight:700;font-size:15.5px;color:var(--ink);min-height:54px}
 .opt:hover{border-color:#8fdcc6}
-.opt i{width:34px;height:34px;border-radius:10px;background:var(--petrol);color:var(--mint);display:grid;place-items:center;flex:none}
+.opt i{width:34px;height:34px;border-radius:10px;background:var(--mint-soft);color:var(--petrol);display:grid;place-items:center;flex:none}
 .opt i svg{width:19px;height:19px}
 .opt em{margin-inline-start:auto;font-style:normal;color:#8aa3aa}
-.say{background:var(--mint-soft);border:1px solid var(--mint-line);border-radius:4px 18px 18px 18px;padding:12px 14px;font-size:15px;line-height:1.5;margin:0 0 12px;color:var(--ink)}
+.say{background:var(--mint-soft);border:0;border-inline-start:3px solid var(--mint);border-radius:4px 14px 14px 4px;padding:12px 14px;font-size:15px;line-height:1.5;margin:0 0 12px;color:var(--ink)}
 .back{font-size:14px;font-weight:700;color:var(--muted);padding:6px 2px;margin-bottom:6px}
 .note{font-size:12.5px;color:var(--muted);line-height:1.5;margin:10px 2px 0}
 .copy-row{display:flex;gap:8px;align-items:center;border:1px dashed var(--mint-line);border-radius:12px;padding:8px 10px;font-size:13px;direction:ltr;justify-content:space-between}
 .copy-row button{direction:rtl;font-weight:800;color:var(--petrol);font-size:13px}
 
 /* ===== פתיח ===== */
-.intro{position:fixed;inset:0;z-index:80;display:grid;place-items:center;background:radial-gradient(90% 60% at 50% 40%,#06566e,var(--petrol) 55%,var(--ink));transition:opacity .5s ease, visibility .5s}
+.intro{position:fixed;inset:0;z-index:80;display:grid;place-items:center;background:var(--petrol);transition:opacity .5s ease, visibility .5s}
 .intro.gone{opacity:0;visibility:hidden}
 .intro .mark{width:min(64vw,260px);position:relative}
 .intro .mark img{width:100%;height:auto;display:block;clip-path:inset(0 0 0 100%);animation:wipe 1s .15s cubic-bezier(.7,0,.2,1) forwards}
@@ -177,87 +178,67 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .anim .in.on{opacity:1;transform:none}
 .bubble{transition:opacity .4s ease,transform .5s cubic-bezier(.2,.9,.3,1.25)}
 
-/* =================== סקיצה C =================== */
-.C{background:var(--ink);color:#e6f3f5}
-.C .sky{position:relative;overflow:hidden;background:radial-gradient(80% 50% at 80% 0%,rgba(0,225,169,.18),transparent 60%),radial-gradient(70% 60% at 0% 30%,rgba(6,86,110,.7),transparent 70%),var(--ink)}
-.C .sky::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,225,169,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(0,225,169,.07) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:linear-gradient(#000,transparent 85%);mask-image:linear-gradient(#000,transparent 85%)}
-.C .head{position:relative;display:flex;justify-content:space-between;align-items:center;padding:18px 18px 0}
-.C .head .pill{color:var(--mint);border:1px solid rgba(0,225,169,.4);background:rgba(0,225,169,.06)}
-.C .glass{position:relative;margin:18px 16px 0;border-radius:26px;padding:16px;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);display:grid;grid-template-columns:112px 1fr;gap:14px;align-items:center}
-.C .glass .ph{position:relative;width:112px;aspect-ratio:1;border-radius:20px;overflow:hidden;box-shadow:0 0 0 2px rgba(0,225,169,.7),0 0 30px rgba(0,225,169,.25)}
-.C .glass .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
-.C .glass .ph::after{content:"";position:absolute;inset-inline:0;height:30%;top:-30%;background:linear-gradient(transparent,rgba(0,225,169,.45),transparent)}
-.C.anim .glass .ph.on::after{animation:scan 1.4s .3s ease-in-out 1}
-@keyframes scan{to{top:100%}}
-.C .glass h1{font-family:var(--f-display);font-weight:900;font-size:30px;line-height:1.05;margin:0 0 4px;color:#fff}
-.C .glass p{margin:0;font-size:13.5px;line-height:1.45;color:#a9c9d0}
-.C .glass .ver{display:inline-flex;gap:5px;align-items:center;margin-top:8px;font-size:12px;font-weight:800;color:var(--mint)}
-.C .duo{position:relative;height:290px;margin:14px 16px 0;border-radius:26px;overflow:hidden;background:linear-gradient(180deg,#023c4c,#023a4a 60%,#01303d);border:1px solid rgba(0,225,169,.32);box-shadow:0 0 40px rgba(0,225,169,.12) inset}
-.C .duo .asst{position:absolute;bottom:-4px;right:-30px;width:92%;max-width:none;-webkit-mask-image:linear-gradient(to top,#000 85%,transparent 100%);mask-image:linear-gradient(to top,#000 85%,transparent 100%)}
-.C .duo .bubble{position:absolute;top:14px;left:14px;width:56%;background:rgba(255,255,255,.96);color:var(--ink);border-radius:20px 20px 6px 20px;padding:12px 14px;font-size:14px;line-height:1.45;font-weight:600;box-shadow:0 0 0 1px rgba(0,225,169,.5),0 14px 30px rgba(0,0,0,.4);z-index:3}
+/* =================== הכרטיס — צבעים סולידיים, נגיעות טורקיז =================== */
+.C{background:var(--bg);color:var(--text)}
+.C .sky{background:#fff;border-bottom:1px solid var(--mint-line);padding-bottom:4px}
+.C .head{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 0}
+.C .head .pill{color:var(--muted);border:1px solid var(--mint-line);background:#fff}
+.C .head .pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint)}
+.C .glass{margin:14px 16px 0;display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center}
+.C .glass .ph{position:relative;width:120px;aspect-ratio:1;border-radius:20px;overflow:hidden;box-shadow:0 8px 22px rgba(20,28,32,.16)}
+.C .glass .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.C .glass h1{font-family:var(--f-display);font-weight:900;font-size:31px;line-height:1.05;margin:0 0 6px;color:var(--ink)}
+.C .glass p{margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
+.C .glass .ver{display:inline-flex;gap:5px;align-items:center;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--text)}
+.C .glass .ver::first-letter{color:var(--mint)}
+.C .duo{position:relative;height:196px;margin:14px 16px 0;border-radius:22px;overflow:hidden;background:var(--panel)}
+.C .duo .asst{position:absolute;bottom:-2px;right:-40px;width:66%;max-width:none;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .5s ease}
+.C.anim .duo .asst.in{opacity:1;transform:translateX(70%)}
+.C.anim .duo .asst.in.peek{transform:translateX(20%) rotate(-4deg)}
+.C.anim .duo .asst.in.on{transform:none}
+.C .duo .bubble{position:absolute;top:10px;left:10px;width:62%;background:#fff;color:var(--ink);border-radius:18px 18px 6px 18px;padding:10px 12px;font-size:13px;line-height:1.45;font-weight:600;box-shadow:0 12px 26px rgba(0,0,0,.3);z-index:5}
 .C .duo .bubble.hide{opacity:0;transform:scale(.94);pointer-events:none}
-.C .ring-glow{position:absolute;bottom:-60px;right:8%;width:300px;height:120px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,225,169,.35),transparent);filter:blur(4px)}
-.C .cta-wrap{padding:16px 16px 0;position:relative}
-.C .sec h2{color:#fff}
-.C .sec .lead{color:#9dbcc4}
+.C .site{position:absolute;left:12px;bottom:14px;width:44%;border-radius:14px;background:#fff;color:var(--ink);overflow:hidden;z-index:4;box-shadow:0 12px 28px rgba(0,0,0,.35);transition:transform .2s}
+.C .site:active{transform:scale(.97)}
+.C .site .bar{display:flex;align-items:center;gap:4px;height:20px;padding:0 8px;background:#eef0f1}
+.C .site .bar i{width:6px;height:6px;border-radius:50%;background:#c4cacd}
+.C .site .bar em{font-style:normal;font-size:10.5px;color:var(--muted);margin-inline-start:auto;direction:ltr}
+.C .site .pg{display:flex;flex-direction:column;gap:2px;padding:8px 10px 10px}
+.C .site b{font-family:var(--f-display);font-size:17px;color:var(--ink)}
+.C .site small{font-size:11.5px;color:var(--muted);line-height:1.3}
+.C .site .enter{margin-top:6px;background:var(--mint);color:#fff;font-weight:800;font-size:13.5px;border-radius:9px;padding:6px 8px;text-align:center}
+.C .site.pulse{animation:sitePulse 1.4s ease 2}
+@keyframes sitePulse{50%{box-shadow:0 0 0 6px rgba(18,181,162,.35),0 12px 28px rgba(0,0,0,.35)}}
+.C .tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:12px 6px;padding:16px 12px 16px}
+.C .tile{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11.5px;font-weight:700;color:var(--text);text-align:center;line-height:1.15}
+.C .tile i{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--mint-soft);border:1px solid var(--mint-line);color:var(--petrol);font-style:normal}
+.C .tile i svg{width:23px;height:23px}
+.C .tile.wa i{background:var(--wa);color:#fff;border-color:transparent}
+.C .tile.call i{background:var(--petrol);color:#fff;border-color:transparent}
+@media (max-width:360px){.C .tile i{width:46px;height:46px}.C .tile{font-size:10.5px}.C .glass{grid-template-columns:100px 1fr}.C .glass .ph{width:100px}}
+.C .sec h2{color:var(--ink)}
 .C .eyebrow{color:var(--mint)}
+.C .presenter{display:flex;gap:10px;align-items:flex-start;margin:6px 0 12px}
+.C .presenter img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none}
+.C .presenter p{margin:0;background:#fff;border:1px solid var(--mint-line);border-radius:4px 16px 16px 16px;padding:9px 12px;font-size:14px;line-height:1.45;color:var(--text);min-height:44px;transition:opacity .25s}
 .C .deck{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 14px;margin:0 -20px;scrollbar-width:none}
 .C .deck::-webkit-scrollbar{display:none}
-.C .card3{scroll-snap-align:center;flex:0 0 78%;border-radius:22px;padding:18px;background:linear-gradient(165deg,rgba(255,255,255,.10),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.13);position:relative;overflow:hidden;text-align:right;color:#e6f3f5;display:flex;flex-direction:column;gap:8px;min-height:200px;transition:border-color .3s,transform .3s}
-.C .card3::before{content:"";position:absolute;top:-40%;left:-30%;width:70%;height:90%;background:radial-gradient(closest-side,rgba(0,225,169,.22),transparent);pointer-events:none}
-.C .card3.active{border-color:rgba(0,225,169,.75)}
-.C .card3 .ic{width:46px;height:46px;border-radius:14px;background:rgba(0,225,169,.14);color:var(--mint);display:grid;place-items:center;border:1px solid rgba(0,225,169,.35)}
+.C .card3{scroll-snap-align:center;flex:0 0 78%;border-radius:20px;padding:18px;background:#fff;border:1px solid var(--mint-line);position:relative;text-align:right;display:flex;flex-direction:column;gap:8px;min-height:196px;transition:border-color .3s,box-shadow .3s}
+.C .card3.active{border-color:var(--mint);box-shadow:0 10px 26px rgba(20,28,32,.08)}
+.C .card3 .ic{width:46px;height:46px;border-radius:14px;background:var(--mint-soft);color:var(--petrol);display:grid;place-items:center}
 .C .card3 .ic svg{width:24px;height:24px}
-.C .card3 b{font-size:19px;color:#fff;font-family:var(--f-display)}
-.C .card3 span{font-size:14px;line-height:1.5;color:#a9c9d0}
-.C .card3 .go{margin-top:auto;display:inline-flex;align-self:flex-start;gap:6px;align-items:center;font-weight:800;font-size:14px;color:var(--ink);background:var(--mint);border-radius:12px;padding:9px 14px}
-.C .card3 .soon{position:absolute;top:14px;left:14px;font-size:11px;font-weight:800;border-radius:20px;padding:2px 8px;color:var(--mint);border:1px solid rgba(0,225,169,.45)}
+.C .card3 b{font-size:19px;color:var(--ink);font-family:var(--f-display)}
+.C .card3 span{font-size:14px;line-height:1.5;color:var(--muted)}
+.C .card3 .go{margin-top:auto;display:inline-flex;align-self:flex-start;gap:6px;align-items:center;font-weight:800;font-size:14px;color:#fff;background:var(--petrol);border-radius:12px;padding:9px 14px}
+.C .card3 .soon{position:absolute;top:14px;left:14px;font-size:11px;font-weight:800;border-radius:20px;padding:2px 8px;color:var(--muted);border:1px solid var(--mint-line)}
 .C .dots{display:flex;justify-content:center;gap:6px}
-.C .dots i{width:7px;height:7px;border-radius:5px;background:rgba(255,255,255,.25);transition:.3s}
+.C .dots i{width:7px;height:7px;border-radius:5px;background:#cdd3d6;transition:.3s}
 .C .dots i.on{width:20px;background:var(--mint)}
-.C .presenter{display:flex;gap:10px;align-items:flex-start;margin:6px 0 12px}
-.C .presenter img{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--mint);flex:none}
-.C .presenter p{margin:0;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:4px 16px 16px 16px;padding:9px 12px;font-size:14px;line-height:1.45;color:#e6f3f5;min-height:44px;transition:opacity .25s}
-.C .ct{color:#d6eaee}
-.C .ct i{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:var(--mint)}
-.C .ct.wa i{background:var(--wa);color:#fff}
-.C .chip{background:rgba(0,225,169,.08);border-color:rgba(0,225,169,.3);color:#d6f5ec}
-.C .lk{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
-.C .lk b{color:#fff}.C .lk small{color:#93b3bb}
-.C .lk i{background:rgba(0,225,169,.14);color:var(--mint)}
-.C .meet{margin-top:20px;background:radial-gradient(120% 90% at 85% 0%,rgba(0,225,169,.2),transparent 50%),linear-gradient(160deg,#06566e,#012a36);border:1px solid rgba(0,225,169,.3)}
-.C .foot{background:#00161d}
-
-
-/* C — מסך ראשון עם האתר וכל הקישורים */
-.C .glass{margin-top:14px;padding:12px;grid-template-columns:84px 1fr;gap:12px}
-.C .glass .ph{width:84px;border-radius:18px}
-.C .glass h1{font-size:26px}
-.C .glass p{font-size:13px}
-.C .glass .ver{margin-top:5px;font-size:11.5px}
-.C .duo{height:196px;margin-top:10px}
-.C .duo .asst{width:68%;right:-40px;bottom:-2px}
-.C .duo .bubble{top:10px;left:10px;width:62%;font-size:13px;padding:10px 12px;z-index:5}
-.C .site{position:absolute;left:12px;bottom:14px;width:47%;border-radius:14px;background:#fff;color:var(--ink);overflow:hidden;z-index:4;
-  box-shadow:0 0 0 2px var(--mint),0 12px 28px rgba(0,0,0,.45);transform:rotate(-2deg);transition:transform .2s}
-.C .site:active{transform:rotate(-2deg) scale(.97)}
-.C .site .bar{display:flex;align-items:center;gap:4px;height:20px;padding:0 8px;background:#e9f1f2}
-.C .site .bar i{width:6px;height:6px;border-radius:50%;background:#b9cbcf}
-.C .site .bar em{font-style:normal;font-size:10.5px;color:#5a7680;margin-inline-start:auto;direction:ltr}
-.C .site .pg{display:flex;flex-direction:column;gap:2px;padding:8px 10px 10px}
-.C .site b{font-family:var(--f-display);font-size:17px;color:var(--petrol)}
-.C .site small{font-size:11.5px;color:var(--muted);line-height:1.3}
-.C .site .enter{margin-top:6px;background:var(--mint);color:var(--ink);font-weight:800;font-size:13.5px;border-radius:9px;padding:6px 8px;text-align:center}
-.C .site.pulse{animation:sitePulse 1.6s ease 2}
-@keyframes sitePulse{50%{box-shadow:0 0 0 2px var(--mint),0 0 0 10px rgba(0,225,169,.25),0 12px 28px rgba(0,0,0,.45)}}
-.C .tiles{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:10px 6px;padding:14px 12px 18px}
-.C .tile{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:#d6eaee;text-align:center;line-height:1.15}
-.C .tile i{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:var(--mint);font-style:normal;font-weight:900}
-.C .tile i svg{width:23px;height:23px}
-.C .tile.wa i{background:var(--wa);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(31,191,91,.35)}
-.C .tile.call i{background:var(--mint);color:var(--ink);border-color:transparent}
-@media (max-width:360px){.C .tile i{width:46px;height:46px}.C .tile{font-size:10.5px}}
-
+.C .chip{background:#fff;border-color:var(--mint-line);color:var(--text)}
+.C .meet{margin-top:22px}
+.C .meet .eyebrow{color:var(--mint)}
+.C .video{background:var(--panel)}
+.C .foot .logo{height:34px}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
@@ -270,9 +251,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <!-- ================= C ================= -->
     <section class="view C dark" id="view-c" data-v="c" aria-label="כרטיס הביקור של מאיר כהן">
       <div class="sky">
-        <div class="head"><img class="logo in" src="assets/logo-light.png" alt="יהב ביטוח ופיננסים"><span class="pill in">✦ כרטיס ביקור דיגיטלי</span></div>
+        <div class="head"><img class="logo in" src="assets/logo-dark.png" alt="יהב ביטוח ופיננסים"><span class="pill in">✦ כרטיס ביקור דיגיטלי</span></div>
         <div class="glass in zoom">
-          <div class="ph in"><img src="assets/meir.jpg" alt="מאיר כהן"></div>
+          <div class="ph"><img src="assets/meir.jpg" alt="מאיר כהן"></div>
           <div><h1>מאיר כהן</h1><p>מנכ״ל יהב ביטוח ופיננסים · סוכן ביטוח פנסיוני וכללי</p><span class="ver">✓ סוכן ביטוח מורשה · 15+ שנות ניסיון</span></div>
         </div>
         <div class="duo">
@@ -573,9 +554,13 @@ function play(v){
     at(9000,()=>{en.className="entry shrink gone"; fab.dataset.state="on"; fab.classList.add("breathe");});
   } else {
     at(1700,()=>on(".head .in")); at(1900,()=>on(".glass,.ph"));
-    at(2500,()=>on(".site")); at(2700,()=>on("#c-asst")); at(3300,()=>on(".bubble")); at(3600,()=>on(".tiles"));
-    at(7600,()=>{ q(".bubble").classList.add("hide"); const st=q(".site"); st.classList.remove("pulse"); void st.offsetWidth; st.classList.add("pulse"); });
-    at(9200,()=>{ fab.dataset.state="on"; fab.classList.add("breathe"); });
+    const as=q("#c-asst"); as.classList.remove("peek");
+    at(2300,()=>on(".site")); at(2500,()=>on(".tiles"));
+    at(2700,()=>as.classList.add("peek"));                               // העוזר מציץ מהצד
+    at(4000,()=>{ as.classList.add("on"); const st=q(".site"); st.classList.remove("pulse"); void st.offsetWidth; st.classList.add("pulse"); }); // ואז מצביע על האתר
+    at(4600,()=>on(".bubble"));
+    at(9000,()=>q(".bubble").classList.add("hide"));
+    at(9600,()=>{ fab.dataset.state="on"; fab.classList.add("breathe"); });
   }
 }
 document.getElementById("skip").addEventListener("click",()=>finalState(current()));
