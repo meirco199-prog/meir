@@ -184,21 +184,24 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .C .head{display:flex;justify-content:space-between;align-items:center;padding:16px 18px 0}
 .C .head .pill{color:var(--muted);border:1px solid var(--mint-line);background:#fff}
 .C .head .pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint)}
-.C .glass{margin:14px 16px 0;display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center}
-.C .glass .ph{position:relative;width:120px;aspect-ratio:1;border-radius:20px;overflow:hidden;box-shadow:0 8px 22px rgba(20,28,32,.16)}
+.C .sky{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+.C .glass{margin:18px 20px 0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.C .glass .ph{width:min(62vw,240px);aspect-ratio:1;border-radius:28px;overflow:hidden;box-shadow:0 14px 34px rgba(20,28,32,.18)}
 .C .glass .ph img{width:100%;height:100%;object-fit:cover;display:block}
-.C .glass h1{font-family:var(--f-display);font-weight:900;font-size:31px;line-height:1.05;margin:0 0 6px;color:var(--ink)}
-.C .glass p{margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
-.C .glass .ver{display:inline-flex;gap:5px;align-items:center;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--text)}
+.C .glass h1{font-family:var(--f-display);font-weight:900;font-size:36px;line-height:1.05;margin:16px 0 6px;color:var(--ink)}
+.C .glass p{margin:0;font-size:15px;line-height:1.45;color:var(--muted)}
+.C .glass .ver{display:inline-flex;gap:5px;align-items:center;margin-top:8px;font-size:13px;font-weight:700;color:var(--text)}
 .C .glass .ver::first-letter{color:var(--mint)}
-.C .duo{position:relative;height:196px;margin:14px 16px 0;border-radius:22px;overflow:hidden;background:var(--panel)}
-.C .duo .asst{position:absolute;bottom:-2px;right:-40px;width:66%;max-width:none;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .5s ease}
-.C.anim .duo .asst.in{opacity:1;transform:translateX(70%)}
-.C.anim .duo .asst.in.peek{transform:translateX(20%) rotate(-4deg)}
-.C.anim .duo .asst.in.on{transform:none}
-.C .duo .bubble{position:absolute;top:10px;left:10px;width:62%;background:#fff;color:var(--ink);border-radius:18px 18px 6px 18px;padding:10px 12px;font-size:13px;line-height:1.45;font-weight:600;box-shadow:0 12px 26px rgba(0,0,0,.3);z-index:5}
-.C .duo .bubble.hide{opacity:0;transform:scale(.94);pointer-events:none}
-.C .site{position:absolute;left:12px;bottom:14px;width:44%;border-radius:14px;background:#fff;color:var(--ink);overflow:hidden;z-index:4;box-shadow:0 12px 28px rgba(0,0,0,.35);transition:transform .2s}
+.C .hint{margin:auto auto 0;padding:6px 14px 14px;font-size:13px;font-weight:700;color:var(--muted)}
+.C .hint span{display:inline-block;color:var(--mint);animation:bob 1.6s ease-in-out infinite}
+.C .site-sec{padding-top:30px}
+.C .duo{position:relative;height:272px;margin-top:6px;border-radius:22px;overflow:hidden;background:var(--panel)}
+.C .duo .asst{position:absolute;bottom:-2px;right:-40px;width:68%;max-width:none;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.C .duo.wait .asst{transform:translateX(75%)}
+.C .duo.peek .asst{transform:translateX(20%) rotate(-4deg)}
+.C .duo .bubble{position:absolute;top:12px;left:12px;width:62%;background:#fff;color:var(--ink);border-radius:18px 18px 6px 18px;padding:10px 12px;font-size:13.5px;line-height:1.45;font-weight:600;box-shadow:0 12px 26px rgba(0,0,0,.3);z-index:5;transition:opacity .4s ease,transform .5s cubic-bezier(.2,.9,.3,1.25)}
+.C .duo.wait .bubble,.C .duo.peek .bubble,.C .duo.point .bubble{opacity:0;transform:translateY(6px) scale(.95)}
+.C .site{position:absolute;left:12px;bottom:14px;width:40%;border-radius:14px;background:#fff;color:var(--ink);overflow:hidden;z-index:4;box-shadow:0 12px 28px rgba(0,0,0,.35);transition:transform .2s}
 .C .site:active{transform:scale(.97)}
 .C .site .bar{display:flex;align-items:center;gap:4px;height:20px;padding:0 8px;background:#eef0f1}
 .C .site .bar i{width:6px;height:6px;border-radius:50%;background:#c4cacd}
@@ -253,20 +256,23 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="sky">
         <div class="head"><img class="logo in" src="assets/logo-dark.png" alt="יהב ביטוח ופיננסים"><span class="pill in">✦ כרטיס ביקור דיגיטלי</span></div>
         <div class="glass in zoom">
-          <div class="ph"><img src="assets/meir.jpg" alt="מאיר כהן"></div>
-          <div><h1>מאיר כהן</h1><p>מנכ״ל יהב ביטוח ופיננסים · סוכן ביטוח פנסיוני וכללי</p><span class="ver">✓ סוכן ביטוח מורשה · 15+ שנות ניסיון</span></div>
+          <div class="ph"><img src="assets/meir.jpg" alt="מאיר כהן" width="640" height="640"></div>
+          <h1>מאיר כהן</h1><p>מנכ״ל יהב ביטוח ופיננסים · סוכן ביטוח פנסיוני וכללי</p><span class="ver">✓ סוכן ביטוח מורשה · 15+ שנות ניסיון</span>
         </div>
-        <div class="duo">
-          <div class="ring-glow"></div>
-          <img class="asst in from-right" id="c-asst" src="assets/assistant.jpg" alt="העוזר הדיגיטלי של יהב מצביע על האתר">
-          <a class="site in" href="https://meirco199-prog.github.io/site-yahav/" target="_blank" rel="noopener" data-say="site">
+        <nav class="tiles in" aria-label="כל הקישורים" data-slot="tiles"></nav>
+        <a class="hint in" href="#site-sec">עוד למטה <span aria-hidden="true">↓</span></a>
+      </div>
+      <section class="sec site-sec" id="site-sec" aria-label="האתר שלנו">
+        <div class="eyebrow">האתר שלנו</div><h2>כל השירותים של יהב במקום אחד</h2>
+        <div class="duo" id="c-duo">
+          <img class="asst" id="c-asst" src="assets/assistant.jpg" alt="העוזר הדיגיטלי של יהב מצביע על האתר">
+          <a class="site" href="https://meirco199-prog.github.io/site-yahav/" target="_blank" rel="noopener">
             <span class="bar"><i></i><i></i><i></i><em>yahav-ins.net</em></span>
             <span class="pg"><b>האתר של יהב</b><small>כל השירותים, הצוות והמלצות לקוחות</small><span class="enter">כניסה לאתר ←</span></span>
           </a>
-          <div class="bubble in" data-bubble role="status">שלום! נעים להכיר 👋<br>זה מאיר, סוכן הביטוח שלכם.<br>ואני העוזר הדיגיטלי של יהב — כאן כדי לעזור לכם למצוא בדיוק את מה שאתם צריכים!</div>
+          <div class="bubble" role="status">שלום! אני העוזר הדיגיטלי של יהב 👋<br>כל השירותים שלנו מחכים לכם באתר. לחצו וכנסו!</div>
         </div>
-        <nav class="tiles in" aria-label="כל הקישורים" data-say="wa" data-slot="tiles"></nav>
-      </div>
+      </section>
       <div class="sec" data-say="services">
         <div class="eyebrow">השירותים שלנו</div><h2>איך אפשר לעזור לכם?</h2>
         <div class="presenter"><img src="assets/assistant-face.jpg" alt=""><p id="c-present" aria-live="polite">החליקו בין הכרטיסים — אני אסביר על כל שירות.</p></div>
@@ -318,6 +324,7 @@ const waLink = t => `https://wa.me/${YAHAV.wa}?text=${encodeURIComponent("שלו
 const telLink = n => "tel:"+n.replace(/-/g,"");
 
 const I = {
+  globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>',
   wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2s-1 .3-3.4-.7a11.6 11.6 0 0 1-4.6-4.1c-.4-.5-1-1.6-1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6a8 8 0 0 0 3.9 3.4c.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>',
   call:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>',
   user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M19 3v4M17 5h4"/></svg>',
@@ -381,7 +388,7 @@ function tilesHTML(){return `
   <a class="tile" href="https://www.facebook.com/yahavins/" target="_blank" rel="noopener"><i>${I.fb}</i>פייסבוק</a>
   <a class="tile" href="https://youtu.be/n5gzM1gjzI8?si=_XNyNbNbH7k6J181" target="_blank" rel="noopener"><i>${I.play}</i>ריאיון בטלוויזיה</a>
   <a class="tile" href="https://mumlazim.walla.co.il/item/3407007" target="_blank" rel="noopener"><i>${I.news}</i>כתבה בוואלה</a>
-  <button class="tile" type="button" data-open="menu"><i>${I.search}</i>העוזר הדיגיטלי</button>`}
+  <a class="tile" href="https://meirco199-prog.github.io/site-yahav/" target="_blank" rel="noopener"><i>${I.globe}</i>האתר שלנו</a>`}
 function moreHTML(noLinks){return `
   <div class="sec"><div class="eyebrow">מידע נוסף</div><h2>תחומי התמחות</h2>
     <div class="chips"><span class="chip">בריאות</span><span class="chip">פנסיה וחיסכון</span><span class="chip">דירה ורכב</span><span class="chip">ביטוח עסקי</span><span class="chip">השקעות</span><span class="chip">סיעוד</span></div></div>
@@ -489,7 +496,7 @@ function react(text,{point=false}={}){
   clearTimeout(tipT); tipT=setTimeout(hideTip,3600);
 }
 function hideTip(){ tip.classList.remove("show"); fab.classList.remove("point"); }
-const SAY={site:["האתר שלנו כאן — לחצו להיכנס ✨",true], services:["אלה השירותים שלנו — בחרו נושא 👆",true], wa:["רוצה לדבר איתנו? וואטסאפ זה הכי מהיר 💬",false], portal:["כאן תוכלו להיכנס לאזור האישי 🔒",true], meet:["זה אני! לחצו על \"בואו נתחיל\"",false], contact:["אפשר גם לשמור את מאיר באנשי הקשר",false]};
+const SAY={services:["אלה השירותים שלנו — בחרו נושא 👆",true], wa:["רוצה לדבר איתנו? וואטסאפ זה הכי מהיר 💬",false], portal:["כאן תוכלו להיכנס לאזור האישי 🔒",true], meet:["זה אני! לחצו על \"בואו נתחיל\"",false], contact:["אפשר גם לשמור את מאיר באנשי הקשר",false]};
 let seen=new Set();
 const io=new IntersectionObserver(es=>es.forEach(en=>{
   if(!en.isIntersecting) return; const k=en.target.dataset.say; if(seen.has(k)) return;
@@ -515,12 +522,28 @@ const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const intro=document.getElementById("intro"); let timers=[];
 const at=(ms,fn)=>timers.push(setTimeout(fn,ms));
 function clearTimers(){timers.forEach(clearTimeout); timers=[];}
+let introDone=false, heroVisible=true;
+function updateFab(){
+  const show=introDone&&!heroVisible;
+  if(show&&fab.dataset.state!=="on"){ fab.dataset.state="on"; fab.classList.add("breathe"); }
+  if(!show&&fab.dataset.state!=="off"){ fab.dataset.state="off"; fab.classList.remove("breathe"); hideTip(); }
+}
+new IntersectionObserver(es=>{ heroVisible=es[0].isIntersecting; updateFab(); },{threshold:0}).observe(document.querySelector("#view-c .glass .ph"));
+/* העוזר מופיע רק אחרי גלילה: מציץ מהצד, ואז מצביע על האתר */
+const duo=document.getElementById("c-duo");
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  duo.classList.add("wait");
+  const dio2=new IntersectionObserver(es=>{ if(!es[0].isIntersecting) return; dio2.disconnect();
+    setTimeout(()=>duo.className="duo peek",150);
+    setTimeout(()=>{ duo.className="duo point"; duo.querySelector(".site").classList.add("pulse"); },1400);
+    setTimeout(()=>duo.className="duo",2000);
+  },{threshold:.55}); dio2.observe(duo);
+}
 function finalState(v){
   clearTimers(); intro.classList.add("gone");
   v.classList.remove("anim"); v.querySelectorAll(".in").forEach(e=>e.classList.add("on"));
   v.querySelectorAll("[data-bubble]").forEach(b=>b.classList.add("hide"));
-  const en=v.querySelector(".entry"); if(en){en.className="entry gone";}
-  fab.dataset.state="on"; fab.classList.add("breathe");
+  introDone=true; updateFab();
 }
 function flyToFab(fromEl,cb){
   if(reduce||!fromEl||!fromEl.animate){cb();return;}
@@ -533,7 +556,7 @@ function flyToFab(fromEl,cb){
   ghost.animate([{transform:"translate(0,0) scale(1)"},{transform:`translate(${dx}px,${dy}px) scale(${64/s})`}],{duration:750,easing:"cubic-bezier(.6,0,.2,1)"}).onfinish=()=>{ghost.remove();cb();};
 }
 function play(v){
-  clearTimers(); seen=new Set(); hideTip(); fab.dataset.state="off"; fab.classList.remove("breathe");
+  clearTimers(); seen=new Set(); hideTip(); introDone=false; updateFab();
   if(reduce){ finalState(v); return; }
   const q=s=>v.querySelector(s), qa=s=>[...v.querySelectorAll(s)];
   v.classList.add("anim"); qa(".in").forEach(e=>e.classList.remove("on"));
@@ -553,14 +576,9 @@ function play(v){
     at(8400,()=>en.className="entry shrink");
     at(9000,()=>{en.className="entry shrink gone"; fab.dataset.state="on"; fab.classList.add("breathe");});
   } else {
-    at(1700,()=>on(".head .in")); at(1900,()=>on(".glass,.ph"));
-    const as=q("#c-asst"); as.classList.remove("peek");
-    at(2300,()=>on(".site")); at(2500,()=>on(".tiles"));
-    at(2700,()=>as.classList.add("peek"));                               // העוזר מציץ מהצד
-    at(4000,()=>{ as.classList.add("on"); const st=q(".site"); st.classList.remove("pulse"); void st.offsetWidth; st.classList.add("pulse"); }); // ואז מצביע על האתר
-    at(4600,()=>on(".bubble"));
-    at(9000,()=>q(".bubble").classList.add("hide"));
-    at(9600,()=>{ fab.dataset.state="on"; fab.classList.add("breathe"); });
+    at(1700,()=>on(".head .in")); at(1900,()=>on(".glass"));
+    at(2400,()=>on(".tiles")); at(2700,()=>on(".hint"));
+    at(2900,()=>{ introDone=true; updateFab(); });
   }
 }
 document.getElementById("skip").addEventListener("click",()=>finalState(current()));
